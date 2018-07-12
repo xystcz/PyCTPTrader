@@ -1,0 +1,71 @@
+{
+    "simnow1": {
+        "TraderFront": [
+            "tcp://180.168.146.187:10001",
+            "tcp://180.168.146.187:10000",
+            "tcp://218.202.237.33 :10002"
+        ],
+        "TraderCache": "_tmp_simnow1_t_",
+        "MarketFront": [
+            "tcp://180.168.146.187:10011",
+            "tcp://180.168.146.187:10010",
+            "tcp://218.202.237.33 :10012"
+        ],
+        "MarketCache": "_tmp_simnow1_m_",
+        "Broker": "9999",
+        "User": "464646465",
+        "Password": "35313"
+    },
+    "simnow2": {
+        "TraderFront": [
+            "tcp://180.168.146.187:10030"
+        ],
+        "TraderCache": "_tmp_simnow2_t_",
+        "MarketFront": [
+            "tcp://180.168.146.187:10031"
+        ],
+        "MarketCache": "_tmp_simnow2_m_",
+        "Broker": "9999",
+        "User": "4684646",
+        "Password": "546861"
+    },
+    "中信期货": {
+        "TraderFront": [
+            "tcp://ctp1-front1.citicsf.com:41205",
+            "tcp://ctp1-front2.citicsf.com:41205",
+            "tcp://ctp1-front3.citicsf.com:41205",
+            "tcp://ctp1-front4.citicsf.com:41205",
+            "tcp://ctp1-front5.citicsf.com:41205",
+            "tcp://ctp1-front6.citicsf.com:41205",
+            "tcp://ctp1-front7.citicsf.com:41205",
+            "tcp://ctp1-front8.citicsf.com:41205",
+            "tcp://ctp1-front9.citicsf.com:41205",
+            "tcp://ctp1-front10.citicsf.com:41205",
+            "tcp://ctp1-front11.citicsf.com:41205",
+            "tcp://ctp1-front12.citicsf.com:41205",
+            "tcp://ctp1-front13.citicsf.com:41205"
+        ],
+        "TraderCache": "_tmp_zxqh_t_",
+        "MarketFront": [
+            "tcp://ctp1-md1.citicsf.com:41213",
+            "tcp://ctp1-md2.citicsf.com:41213",
+            "tcp://ctp1-md3.citicsf.com:41213",
+            "tcp://ctp1-md4.citicsf.com:41213",
+            "tcp://ctp1-md5.citicsf.com:41213",
+            "tcp://ctp1-md6.citicsf.com:41213",
+            "tcp://ctp1-md7.citicsf.com:41213",
+            "tcp://ctp1-md8.citicsf.com:41213",
+            "tcp://ctp1-md9.citicsf.com:41213",
+            "tcp://ctp1-md10.citicsf.com:41213",
+            "tcp://ctp1-md11.citicsf.com:41213",
+            "tcp://ctp1-md12.citicsf.com:41213",
+            "tcp://ctp1-md13.citicsf.com:41213"
+        ],
+        "MarketCache": "_tmp_zxqh_m_",
+        "Broker": "66666",
+        "User": "5445135313",
+        "Password": "5454343",
+        "Client": "SHINNYQ7V2",
+        "AuthCode": "OQ4HTDGD2KCGVOAP"
+    }
+}
