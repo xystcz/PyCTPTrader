@@ -66,7 +66,7 @@ class ProcedureManager:
 
     CONNECT_REQUEST_ID = -1
 
-    def __init__(self, ):
+    def __init__(self):
         self._request_id = 0
         self.procedures = OrderedDict()
         self.order_ref_id, self.order_sys_id = OrderedDict(), OrderedDict()
@@ -128,7 +128,7 @@ class Trading(PyCTP.CThostFtdcTraderApi):
     offset_flag_map_revert = dict((v, k) for k, v in offset_flag_map.items())
     hedge_flag_map_revert = dict((v, k) for k, v in hedge_flag_map.items())
 
-    def __new__(cls, flow_cache_path=b'_tmp_t_', *args, **kwargs):
+    def __new__(cls, flow_cache_path=b'_tmp_t_'):
         return cls.CreateFtdcTraderApi(flow_cache_path)
 
     def __init__(self, flow_cache_path=b'_tmp_t_'):
@@ -300,7 +300,7 @@ class Trading(PyCTP.CThostFtdcTraderApi):
         pass
 
     @operator_flow_context()
-    def ReqAuthenticate(self, BrokerID, UserID, UserProductInfo, AuthCode):
+    def ReqAuthenticate(self, BrokerID, UserID, AppID, AuthCode):
         pass
 
     @operator_flow_context()
@@ -593,7 +593,7 @@ class Trading(PyCTP.CThostFtdcTraderApi):
 class MarketData(PyCTP.CThostFtdcMdApi):
 
 
-    def __new__(cls, flow_cache_path=b'_tmp_m_', *args, **kwargs):
+    def __new__(cls, flow_cache_path=b'_tmp_m_'):
         return cls.CreateFtdcMdApi(flow_cache_path)
 
     def __init__(self, flow_cache_path=b'_tmp_m_'):

@@ -9,7 +9,7 @@ import traceback
 from datetime import datetime, date, time
 from threading import Event, RLock
 from collections import defaultdict
-from source.ctp.warpper import Trading, MarketData, OrderProcedure, HUGE_VAL
+from source.ctp.wrapper import Trading, MarketData, OrderProcedure, HUGE_VAL
 
 
 class Order:
@@ -83,8 +83,8 @@ class OrderTrader:
                         "Broker": "9999",                   # 期货公司代码
                         "User": "76871313",                 # 账号
                         "Password": "5746531"               # 密码
-                        "Client": "SHINNYQ7V2",             # 客户端名称，期货公司可能会校验客户端是否合法，目前大部分期货公司不需要，暂不填写，可去掉此字段
-                        "AuthCode": "ASDFAFASDFASFA"        # 客户端校验码，期货公司可能会校验客户端是否合法，目前大部分期货公司不需要，暂不填写，可去掉此字段
+                        "Client": "SHINNYQ7V2",             # 客户端名称，看穿式监管验证必须填写
+                        "AuthCode": "ASDFAFASDFASFA"        # 客户端校验码，看穿式监管验证必须填写
                     },
             name:   配置文件中对应的账号
         """
@@ -103,7 +103,9 @@ class OrderTrader:
             self.trader = Trading(params['TraderCache'].encode('gbk'))
             self.trader.Connect(trader_front.encode('gbk'))
             if 'Client' in params:
-                self.trader.ReqAuthenticate(params['Client'].encode('gbk'), params['AuthCode'].encode('gbk'))
+                client = params['Client'].encode('gbk')
+                auth_code = params['AuthCode'].encode('gbk')
+                self.trader.ReqAuthenticate(broker, user, client, auth_code)
             self.trader.Login(broker, user, password)
             self.trader.ReqSettlementInfoConfirm()
         else:

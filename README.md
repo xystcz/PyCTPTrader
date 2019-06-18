@@ -1,12 +1,15 @@
 # PyCTPTrader
 
-本项目是在[PyCTP](https://github.com/shizhuolin/PyCTP)基础上，对Python接口做进一步封装，
-自动处理了所有的回调函数，无需再次重写，
+本项目是在[PyCTP](https://github.com/xystcz/PyCTP)基础上(原[PyCTP](https://github.com/shizhuolin/PyCTP)看穿式监管版本在linux下存在编译问题，因此fork一个新分支)，对Python接口做进一步封装，
+自动处理了所有的回调函数，无需再次重写
+
 简化了下单撤单流程，可直接从Python对象获取每一笔交易的实时状态
+
+添加对看穿式监管版本的支持
 
 ## 环境配置
 
-基于Python3环境， 并在此基础上安装扩展: [PyCTP](https://github.com/shizhuolin/PyCTP)
+基于Python3环境， 并在此基础上安装扩展: [PyCTP](https://github.com/xystcz/PyCTP)
 
 IDE建议使用Pycharm
 
@@ -32,7 +35,7 @@ cfg:    配置文件路径，一般以ctp.json命名，每个账户对应如下�
             "Broker": "9999",                   # 期货公司代码
             "User": "76871313",                 # 账号
             "Password": "5746531"               # 密码
-            "Client": "SHINNYQ7V2",             # 客户端名称，期货公司可能会校验客户端是否合法，目前大部分期货公司不需要，暂不填写，可去掉此字段
-            "AuthCode": "ASDFAFASDFASFA"        # 客户端校验码，期货公司可能会校验客户端是否合法，目前大部分期货公司不需要，暂不填写，可去掉此字段
+            "Client": "SHINNYQ7V2",             # 客户端名称，看穿式监管验证必须填写
+            "AuthCode": "ASDFAFASDFASFA"        # 客户端校验码，看穿式监管验证必须填写
         }
 ```
